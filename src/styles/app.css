@@ -1,0 +1,11 @@
+h1, form {
+    margin-top: 2%;
+}
+
+form label {
+    margin: 0 10px;
+}
+
+button {
+    margin: 0 10px;
+}
