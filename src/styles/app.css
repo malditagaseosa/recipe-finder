@@ -9,3 +9,17 @@ form label {
 button {
     margin: 0 10px;
 }
+
+.container.list-container {
+    margin: 5% auto;
+}
+
+.media.list-item {
+    margin: 2%;
+}
+
+div.star {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 2%;
+}
