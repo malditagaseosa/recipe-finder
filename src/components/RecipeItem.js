@@ -1,20 +1,16 @@
 import React from 'react';
 import { Media } from 'react-bootstrap';
-import { favoriteRecipe } from '../actions';
+import { favoriteRecipe, unfavoriteRecipe } from '../actions';
 import { connect } from 'react-redux';
 
-class RecipeItem extends React.Component {
-    constructor() {
-        super();
-
-        this.state = {
-            favorited: false
-        }
-    }
+class RecipeItem extends React.Component {    
 
     favorite(recipe) {
-        this.props.favoriteRecipe(recipe);
-        this.setState({ favorited: true });
+        if (!recipe.favorite) {
+            this.props.favoriteRecipe(recipe);
+        } else {
+            this.props.unfavoriteRecipe(recipe);
+        }       
     }
 
     render() {
@@ -24,10 +20,12 @@ class RecipeItem extends React.Component {
             <Media className="list-item">
                 {
                     this.props.favoriteBtn ?
-                        this.state.favorited ?
-                            <div className="star">{ String.fromCharCode(9733) }</div>
-                        :
-                            <div onClick={ () => this.favorite(recipe) } className="star">{ String.fromCharCode(9734) }</div>
+                        <div 
+                            onClick={ () => this.favorite(recipe) } 
+                            className="star"
+                        >
+                                { recipe.favorite ? String.fromCharCode(9733) : String.fromCharCode(9734) }
+                        </div>                        
                     :
                         <div></div>                                     
                 }
@@ -51,4 +49,4 @@ class RecipeItem extends React.Component {
     }
 }
 
-export default connect(null, { favoriteRecipe })(RecipeItem);
+export default connect(null, { favoriteRecipe, unfavoriteRecipe })(RecipeItem);

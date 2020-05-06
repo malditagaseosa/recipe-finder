@@ -23,7 +23,11 @@ class SearchRecipes extends React.Component {
         })
         .then(response => response.json())
         .then(json => {
-            this.props.setRecipes(json.results);
+            let result = json.results.map((recipe) => {
+                recipe.favorite = false;
+                return recipe;
+            });
+            this.props.setRecipes(result);
         });
     }
 
