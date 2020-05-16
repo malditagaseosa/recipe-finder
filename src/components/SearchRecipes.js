@@ -17,7 +17,7 @@ class SearchRecipes extends React.Component {
     searchInFavorites(text = "", array = []) {        
         let r = false;
         array.forEach(element => {            
-            if (element.title.toString() == text.toString()) {
+            if (element.title.toString() === text.toString()) {
                 r = true;
             }
         });
