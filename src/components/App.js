@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import NavBar from './NavBar';
 import SearchRecipes from './SearchRecipes';
 import RecipeList from './RecipeList';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,25 +10,18 @@ import '../styles/app.css';
 class App extends React.Component {
   render(){
 
-    let favoritesLink = '';
-
-    if (this.props.favoriteRecipes.length > 0) {
-      favoritesLink = (
-        <Nav>        
-          <Nav.Item>
-            <Link to="/favorites">Favorites</Link>
-          </Nav.Item>
-        </Nav>
-      )
-    }
-
     return (
       <Container>
         <h1>Recipe Finder</h1>
-        { favoritesLink }               
+        { 
+          this.props.favoriteRecipes.length > 0 ?
+            <NavBar />
+          : 
+            '' 
+        }               
         <Row>
           <Col>
-            <SearchRecipes />  
+            <SearchRecipes favorites={ this.props.favoriteRecipes }/>  
           </Col>
         </Row>
         <Row>
