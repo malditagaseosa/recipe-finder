@@ -1,3 +1,6 @@
+# Recipe finder
+Simple project using React with Redux to practice fundamentals
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
