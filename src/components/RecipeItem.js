@@ -15,7 +15,6 @@ class RecipeItem extends React.Component {
 
     render() {
         let { recipe } = this.props;
-
         return (
             <Card className="list-item">
                 <Card.Body>
@@ -31,11 +30,16 @@ class RecipeItem extends React.Component {
                             :
                                 <div></div>                                     
                         }
-                        <img
-                            className="img-fluid mr-3"
-                            src={ recipe.thumbnail }
-                            alt={ recipe.title }                   
-                        />
+                        {
+                            recipe.thumbnail !== "" ?
+                                <img
+                                    className="img-fluid mr-3"
+                                    src={ recipe.thumbnail }
+                                    alt={ recipe.title }                   
+                                />
+                            :
+                            ""
+                        }                        
                         <Media.Body>
                             <a 
                                 target="_blank" 
