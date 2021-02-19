@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import NavBar from './NavBar';
 import SearchRecipes from './SearchRecipes';
 import RecipeList from './RecipeList';
+import Title from './Title';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/app.css';
 
@@ -12,7 +13,7 @@ class App extends React.Component {
 
     return (
       <Container>
-        <h1>Recipe Finder</h1>
+        <Title />
         { 
           this.props.favoriteRecipes.length > 0 ?
             <NavBar />
@@ -20,17 +21,17 @@ class App extends React.Component {
             '' 
         }               
         <Row>
-          <Col>
-            <SearchRecipes favorites={ this.props.favoriteRecipes }/>  
+          <Col md={4}>
+            <Container className="list-container">
+              <SearchRecipes favorites={ this.props.favoriteRecipes }/>
+            </Container>
           </Col>
-        </Row>
-        <Row>
-          <Col>
+          <Col md={8}>
             <Container className="list-container">
               <RecipeList />
             </Container>
           </Col>
-        </Row>                      
+        </Row>                              
       </Container>
     );
   }

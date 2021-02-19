@@ -7,7 +7,6 @@ class SearchRecipes extends React.Component {
 
     constructor(){
         super();
-
         this.state = {
             ingredients: '',
             dish: '',
@@ -21,7 +20,6 @@ class SearchRecipes extends React.Component {
                 r = true;
             }
         });
-
         return r
     }
 
@@ -46,27 +44,30 @@ class SearchRecipes extends React.Component {
         return (
             <Form>
                 <Row>
-                    <Col md={12} lg>
-                        <Form.Group>
-                            <Form.Label>Ingredients</Form.Label>
-                            <Form.Control
-                                onChange={ event => { this.setState({ingredients: event.target.value}) } } 
-                                type="text" 
-                                placeholder="garlic, chicken" />
-                        </Form.Group>
-                    </Col>
-                    <Col md={12} lg>
-                        <Form.Group>
-                            <Form.Label>Dish</Form.Label>
-                            <Form.Control
-                                onChange={ event => { this.setState({dish: event.target.value}) } } 
-                                type="text" 
-                                placeholder="adobo" />
-                        </Form.Group>
-                    </Col>
-                    <Col></Col>
-                </Row>
-                <Button className="" onClick={ event => { event.preventDefault(); this.search() } }>Submit</Button>                
+                    <Col>
+                        <Row>
+                            <Form.Group>
+                                <Form.Label className="ml-0 mb-1">Ingredients</Form.Label>
+                                <Form.Control
+                                    onChange={ event => { this.setState({ingredients: event.target.value}) } } 
+                                    type="text" 
+                                    placeholder="garlic, chicken" />
+                            </Form.Group>
+                        </Row>
+                        <Row>
+                            <Form.Group>
+                                <Form.Label className="ml-0 mb-1">Dish</Form.Label>
+                                <Form.Control
+                                    onChange={ event => { this.setState({dish: event.target.value}) } } 
+                                    type="text" 
+                                    placeholder="adobo" />
+                            </Form.Group>
+                        </Row>
+                    </Col>                    
+                </Row>                
+                <Row>
+                    <Button className="ml-0" onClick={ event => { event.preventDefault(); this.search() } }>Search</Button>                  
+                </Row>                                
             </Form>
         );
     }
