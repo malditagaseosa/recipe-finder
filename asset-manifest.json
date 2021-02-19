@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/recipe-finder/static/css/main.31302a80.chunk.css",
+    "main.js": "/recipe-finder/static/js/main.1fc2cce8.chunk.js",
+    "main.js.map": "/recipe-finder/static/js/main.1fc2cce8.chunk.js.map",
+    "runtime-main.js": "/recipe-finder/static/js/runtime-main.6da655e3.js",
+    "runtime-main.js.map": "/recipe-finder/static/js/runtime-main.6da655e3.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/recipe-finder/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.a083f18d.chunk.js": "/recipe-finder/static/js/2.a083f18d.chunk.js",
+    "static/js/2.a083f18d.chunk.js.map": "/recipe-finder/static/js/2.a083f18d.chunk.js.map",
+    "index.html": "/recipe-finder/index.html",
+    "precache-manifest.7b31726726433d750bb4fb409ec87a02.js": "/recipe-finder/precache-manifest.7b31726726433d750bb4fb409ec87a02.js",
+    "service-worker.js": "/recipe-finder/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/recipe-finder/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.31302a80.chunk.css.map": "/recipe-finder/static/css/main.31302a80.chunk.css.map",
+    "static/js/2.a083f18d.chunk.js.LICENSE": "/recipe-finder/static/js/2.a083f18d.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6da655e3.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.a083f18d.chunk.js",
+    "static/css/main.31302a80.chunk.css",
+    "static/js/main.1fc2cce8.chunk.js"
+  ]
+}
