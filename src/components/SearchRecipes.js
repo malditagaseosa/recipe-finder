@@ -60,7 +60,7 @@ class SearchRecipes extends React.Component {
                                 <Form.Control
                                     onChange={ event => { this.setState({dish: event.target.value}) } } 
                                     type="text" 
-                                    placeholder="adobo" />
+                                    placeholder="lasagna" />
                             </Form.Group>
                         </Row>
                     </Col>                    
