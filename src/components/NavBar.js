@@ -7,9 +7,9 @@ class NavBar extends React.Component {
     render(){         
         
         return (
-            <Nav>        
+            <Nav className="mt-2 mb-3">        
                 <Nav.Item>
-                    <Link to="/favorites">Favorites</Link>
+                    <Link className="btn btn-info" to="/favorites">Favorites</Link>
                 </Nav.Item>
             </Nav>
         );
